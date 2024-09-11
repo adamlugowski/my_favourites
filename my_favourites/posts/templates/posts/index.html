@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} My favourites {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>In this place you will see your posts.</h1>
+            <ul>
+                {% if user.is_authenticated %}
+                    {% for post in posts %}
+                        <li>{{ post }}</li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+    </div>
+{% endblock %}
