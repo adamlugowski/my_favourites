@@ -21,4 +21,4 @@ class Post(Timestamped):
     image = models.ImageField(upload_to='posts/images/%Y/%m/%d', blank=True, null=True)
 
     def __str__(self):
-        return f'{self.id} {self.title}'
+        return f'{self.id} {self.title} {self.content}'

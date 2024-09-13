@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="container">
-        <h1>In this place you will see your posts.</h1>
+        <h1>In this place you will see all posts. Only for authenticated users.</h1>
             <ul>
                 {% if user.is_authenticated %}
                     {% for post in posts %}
