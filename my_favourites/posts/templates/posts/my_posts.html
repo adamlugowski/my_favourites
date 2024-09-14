@@ -3,14 +3,16 @@
 {% block title %} My posts {% endblock %}
 
 {% block content %}
-    <h1>Your posts</h1>
-    {% if posts %}
-    <ul>
-        {% for post in posts %}
-            <li>{{ post.title }} {{ post.content }}</li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>You haven't posted anything!</p>
-    {% endif %}
+    <div class="container">
+        <h1>Your posts</h1>
+            {% if posts %}
+            <ul>
+                {% for post in posts %}
+                    <li>{{ post.title }} {{ post.content }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p>You haven't posted anything!</p>
+            {% endif %}
+    </div>
 {% endblock %}
