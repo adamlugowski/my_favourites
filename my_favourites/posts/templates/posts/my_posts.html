@@ -9,6 +9,12 @@
             <ul>
                 {% for post in posts %}
                     <li>{{ post.title }} {{ post.content }}</li>
+                    {% if post.file %}
+                        <div>This is file. <a href="{{ post.file.url }}">Download</a></div>
+                    {% endif %}
+                    {% if post.image %}
+                        <div><img src="{{ post.image.url }}" alt="Post image"></div>
+                    {% endif %}
                 {% endfor %}
             </ul>
             {% else %}

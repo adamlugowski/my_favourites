@@ -9,6 +9,12 @@
                 {% if user.is_authenticated %}
                     {% for post in posts %}
                         <li>{{ post }}</li>
+                        {% if post.file %}
+                            <div>This is file. <a href="{{ post.file.url }}">Download</a></div>
+                        {% endif %}
+                        {% if post.image %}
+                            <div><img src="{{ post.image.url }}" alt="Post image"></div>
+                        {% endif %}
                     {% endfor %}
                 {% endif %}
             </ul>
